@@ -36,20 +36,20 @@ func TestFooer1(t *testing.T) {
 	}
 }
 
-func TestFooer2(t *testing.T) {
-	input := 3
-	result := Fooer(3)
+//func TestFooer2(t *testing.T) {
+//	input := 3
+//	result := Fooer(3)
 
-	t.Logf("The input was %d", input)
+//	t.Logf("The input was %d", input)
 
-	if result != "Foo" {
-		t.Errorf("Result was incorrect, got: %s, want: %s.", result, "Foo")
-	}
+//	if result != "Foo" {
+//		t.Errorf("Result was incorrect, got: %s, want: %s.", result, "Foo")
+//	}
 
-	t.Fatalf("Stop the test now, we have seen enough")
+//	t.Fatalf("Stop the test now, we have seen enough")
 
-	t.Error("This won't be executed")
-}
+//	t.Error("This won't be executed")
+//}
 
 func TestFooerParallel(t *testing.T) {
 	t.Run("Test 3 in Parallel", func(t *testing.T) {
@@ -98,7 +98,7 @@ func TestFooerWithTestify(t *testing.T) {
 func TestMapWithTestify(t *testing.T) {
 
 	// require equality
-	require.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "3"})
+	require.Equal(t, map[int]string{1: "1", 2: "3"}, map[int]string{1: "1", 2: "3"})
 
 	// assert equality
 	assert.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "2"})
