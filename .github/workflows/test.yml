@@ -1,4 +1,3 @@
-yaml
 name: Golang Test Pipeline
 on:
   push:
